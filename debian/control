@@ -1,0 +1,31 @@
+Source: libimxdmabuffer
+Priority: optional
+Maintainer: Josua Mayer <josua@solid-run.com>
+Build-Depends:
+ debhelper-compat (= 12),
+ python3,
+ imx-kernel-api,
+ imx-vpu-hantro-dev,
+Standards-Version: 4.4.1
+Section: libs
+Vcs-Browser: https://github.com/Freescale/libimxdmabuffer
+Vcs-Git: https://github.com/Freescale/libimxdmabuffer.git
+
+Package: libimxdmabuffer-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ libimxdmabuffer1 (= ${binary:Version}),
+Description: Development files for libimxdmabuffer
+ Provides libraries and headers for building applications with libimxdmabuffer.
+
+Package: libimxdmabuffer1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: dma buffer library for i.MX SoCs
+ Provides APIs for various kinds of dma buffers available in i.MX SoCs.

@@ -1,0 +1,12 @@
+libimxdmabuffer (1.0.1) stable; urgency=medium
+
+  * update waf to 2.0.12
+  * let waf use python 3
+
+ -- Josua Mayer <josua@solid-run.com>  Tue, 14 Apr 2020 14:37:51 +0000
+
+libimxdmabuffer (1.0.0) stable; urgency=medium
+
+  * Initial Release.
+
+ -- Josua Mayer <josua@solid-run.com>  Tue, 03 Dec 2019 14:27:14 +0000
