@@ -265,6 +265,11 @@ def configure(conf):
 				Logs.pprint('NORMAL', 'linux/pxp_device.h was not found in i.MX linux headers path; disabling PxP allocator')
 
 
+	# libpthread
+	pthread_lib_found = conf.check_cc(mandatory = 0, lib = 'pthread', uselib_store = 'PTHREAD')
+	conf.env['EXTRA_USELIBS'] += ['PTHREAD']
+
+
 	# Process the library version number
 	version_node = conf.srcnode.find_node('VERSION')
 	if not version_node:
